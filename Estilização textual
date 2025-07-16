@@ -1,0 +1,183 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jardim Zen - CSS Zen Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Zen Garden</h1>
+        <h2>A Beleza do Design CSS</h2>
+    </header>
+    
+    <div class="summary">
+        <p>Uma demonstração do que pode ser realizado visualmente com <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+    </div>
+    
+    <main class="main">
+        <section class="intro">
+            <h3>O Caminho para a Iluminação</h3>
+            <p>Ladrilhadores que ignoram o tijolo vermelho deixam de aproveitar suas possibilidades. Da mesma forma, devemos reconhecer que existem muitas formas de implementar <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+        </section>
+        
+        <section class="participation">
+            <h3>Participe</h3>
+            <p>Projetos <abbr title="Cascading Style Sheets">CSS</abbr> são necessários para demonstrar o verdadeiro poder do CSS. Você pode modificar o estilo desta página!</p>
+        </section>
+        
+        <section class="benefits">
+            <h3>Benefícios</h3>
+            <p>Por que participar? Para mostrar habilidade, servir de inspiração e como referência para outras técnicas avançadas.</p>
+        </section>
+        
+        <section class="requirements">
+            <h3>Requisitos</h3>
+            <p>Onde possível, usaremos <abbr title="Cascading Style Sheets">CSS</abbr> de nível 3. Você deve usar apenas CSS válido.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Por <a href="#">Gabriel</a></p>
+    </footer>
+</body>
+</html>
+
+css.style
+
+:root {
+  --cor-fundo: #f0f7f4;     
+  --cor-fonte: #3c493f;     
+  --cor-destaque: #7e8d85;  
+  --cor-secundaria: #a2e3c4; 
+  --cor-realce: #b3bfb8;    
+  --cor-texto-claro: #f0f7f4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 1.a - Tamanho fixo para a página */
+  width: 1200px;
+  margin: 0 auto;
+  
+  /* 1.b - Fonte sans-serif */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+  line-height: 1.8;
+  padding: 2rem;
+}
+
+/* Indentação de parágrafos (1.c) */
+p {
+  margin-bottom: 1.2rem;
+  text-indent: 1em;
+}
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h1 {
+  /* 2.a */
+  font-size: 1.8rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  /* 2.b */
+  font-size: 1.4rem;
+  color: var(--cor-texto-claro);
+  font-style: italic;
+  font-weight: 300;
+}
+
+h3 {
+  /* 2.c */
+  font-size: 1.2rem;
+  color: var(--cor-destaque);
+  margin: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--cor-realce);
+  padding-bottom: 0.5rem;
+  text-align: right; /* Alinhamento alternativo */
+}
+
+/* 3.a - Seção de resumo */
+.summary {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fonte);
+  padding: 1rem;
+  text-align: right; /* Alinhamento à direita */
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+/* 3.b - Seção principal */
+.main p {
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+header {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, var(--cor-destaque), var(--cor-secundaria));
+}
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.intro {
+  grid-column: 1 / -1;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  border-radius: 8px;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
