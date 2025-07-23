@@ -1,0 +1,227 @@
+css
+  --cor-fundo: #f0f7f4;     
+  --cor-fonte: #3c493f;   
+  --cor-destaque: #7e8d85;
+  --cor-secundaria: #a2e3c4; 
+  --cor-realce: #b3bfb8;     
+  --cor-texto-claro: #f0f7f4; 
+  --cor-escura: #2a3439;   
+}
+body {
+  /* Largura e centralização */
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+  
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+  line-height: 1.8;
+  padding: 2rem 0;
+}
+
+/* Altura da seção de introdução */
+.intro {
+  height: 550px;
+  grid-column: 1 / -1;
+}
+
+/* Remover container design-archives */
+#design-archives {
+  display: none;
+}
+
+header {
+  /* Inversão de cores */
+  background-color: var(--cor-escura);
+  color: var(--cor-texto-claro);
+  
+  /* Layout flex para título e subtítulo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 1em; /* Espaçamento lateral */
+}
+
+header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Supondo que os menus estejam em listas não ordenadas */
+.panel ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  text-align: center; /* Centraliza itens */
+}
+
+.panel li {
+  margin: 1em 0; /* Espaçamento entre itens */
+}
+
+footer {
+  /* Inversão de cores */
+  background-color: var(--cor-escura);
+  color: var(--cor-texto-claro);
+  
+
+  margin: 4% 0;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+footer a {
+  border: 2px solid var(--cor-texto-claro);
+  padding: 0.5em;
+  margin: 0 0.5em;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  background-color: var(--cor-texto-claro);
+  color: var(--cor-escura);
+}
+p {
+  margin-bottom: 1.2rem;
+  text-indent: 1em;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--cor-destaque);
+  margin: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--cor-realce);
+  padding-bottom: 0.5rem;
+  text-align: right;
+}
+
+.summary {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fonte);
+  padding: 1rem;
+  text-align: right;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+.main p {
+  line-height: 1.5;
+}
+
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+html 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jardim Zen - CSS Zen Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Zen Garden</h1>
+        <h2>A Beleza do Design CSS</h2>
+    </header>
+    
+    <div class="summary">
+        <p>Uma demonstração do que pode ser realizado visualmente com <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+    </div>
+    
+    <main class="main">
+        <section class="intro">
+            <h3>O Caminho para a Iluminação</h3>
+            <p>Ladrilhadores que ignoram o tijolo vermelho deixam de aproveitar suas possibilidades. Da mesma forma, devemos reconhecer que existem muitas formas de implementar <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+        </section>
+        
+        <section class="participation">
+            <h3>Participe</h3>
+            <p>Projetos <abbr title="Cascading Style Sheets">CSS</abbr> são necessários para demonstrar o verdadeiro poder do CSS. Você pode modificar o estilo desta página!</p>
+        </section>
+        
+        <section class="benefits">
+            <h3>Benefícios</h3>
+            <p>Por que participar? Para mostrar habilidade, servir de inspiração e como referência para outras técnicas avançadas.</p>
+        </section>
+        
+        <section class="requirements">
+            <h3>Requisitos</h3>
+            <p>Onde possível, usaremos <abbr title="Cascading Style Sheets">CSS</abbr> de nível 3. Você deve usar apenas CSS válido.</p>
+        </section>
+        
+        <!-- Painel de menus lateral (exemplo) -->
+        <div class="panel" id="zen-resources">
+            <h3>Recursos</h3>
+            <ul>
+                <li><a href="#">Ver este design</a></li>
+                <li><a href="#">Recursos CSS</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Enviar um design</a></li>
+            </ul>
+        </div>
+        
+        <!-- Container que será removido -->
+        <div id="design-archives">
+            <h3>Arquivos</h3>
+            <ul>
+                <li><a href="#">Próximos designs</a></li>
+                <li><a href="#">Todos designs</a></li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">CC</a>
+        <a href="#">A11y</a>
+        <a href="#">GH</a>
+    </footer>
+</body>
+</html>
